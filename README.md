@@ -7,11 +7,9 @@ This repository contains the implementation code for a breast cancer missense va
 
 ```
 .
-├── data/                     # Folder for input CSV datasets
+├── data/                    # Folder for input CSV datasets
 ├── outputs/                 # Stores results, plots, and evaluation files
-├── src/                     # Python scripts for training and evaluation
-│   └── main.py              # Main script for end-to-end execution
-├── notebooks/               # Optional exploratory analysis
+├── main.py
 ├── requirements.txt         # Required Python packages
 ├── README.md                # Project overview and usage instructions
 └── LICENSE                  # Licensing information
@@ -26,10 +24,10 @@ pip install -r requirements.txt
 
 ## 🚀 How to Run
 
-1. Place your dataset (`dataset.csv`) in the `data/` folder.
+1. Place your dataset (`dataset.csv`) in the `data/` folder (Dataset-1 sample is provided as a structure guide and for testing the workflow).
 2. Run the pipeline with:
 ```bash
-python src/main.py
+python main.py
 ```
 
 ## 📊 Outputs
@@ -55,7 +53,7 @@ python src/main.py
 
 If you use this code, please cite:
 
-Ahmad, R.M., Mohamad, M.S., Ali, B.R. "Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction", [Preprint Manuscript, 2025].
+Ahmad, R.M., Mohamad, M.S., Ali, B.R. "Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction", [Ready for submission, 2025].
 
 ## 🔐 License
 
