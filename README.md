@@ -89,13 +89,19 @@ python main.py
 
 ---
 
-## 📖 Citation
+## 📚 Citation
 
-Please cite the following if you use this repository:
+If you use this repository, please cite as (will be updated once published):
 
-> Ahmad, R.M., Mohamad, M.S., Ali, B.R.  
-> "Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction" (2025).  
-> [GitHub Repository / Preprint Link Placeholder] (will be updated once published)
+```bibtex
+
+  authors = {Rahaf M. Ahmad, Mohd Saberi Mohamad, Bassam R. Ali*},
+  title = {Precision in Prediction: Tailoring Machine Learning for Breast Cancer Missense Variants },
+  year = {2025},
+  Link to GiHub repository annd publication doi = {\\url{https://github.com/rahafahmad89/Precision-for-prediction}},
+  note = {MIT License}
+}
+```
 
 ---
 
