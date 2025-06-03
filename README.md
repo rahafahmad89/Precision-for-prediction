@@ -4,7 +4,7 @@ This repository implements a complete machine learning pipeline for predicting t
 
 📝 **Associated Manuscript**:  
 *“Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction”*  
-📎 [Preprint or GitHub DOI Placeholder]
+📎 [Preprint or GitHub DOI Placeholder] (will be updated once published)
 
 ---
 
@@ -12,18 +12,12 @@ This repository implements a complete machine learning pipeline for predicting t
 
 ```
 .
-├── data/               # Input and processed datasets
-│   ├── raw/
-│   └── processed/
-├── notebooks/          # Optional EDA or visualizations
+├── data/              
 ├── outputs/            # Model results, figures, metrics
 │   ├── models/
 │   └── figures/
-├── src/                # Source code for execution
-│   └── main.py
-├── tests/              # Unit tests (planned)
+├── main.py
 ├── requirements.txt    # Pip dependencies
-├── environment.yml     # Conda environment
 ├── LICENSE             # License (MIT)
 └── README.md           # Project documentation
 ```
@@ -34,8 +28,9 @@ This repository implements a complete machine learning pipeline for predicting t
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/yourusername/variant-prediction-ML.git
-cd variant-prediction-ML
+git clone https://github.com/rahafahmad89/Precision-for-prediction.git
+cd Precision-for-prediction
+
 ```
 
 2. **Install dependencies**:
@@ -43,18 +38,14 @@ cd variant-prediction-ML
      ```bash
      pip install -r requirements.txt
      ```
-   - Using conda:
-     ```bash
-     conda env create -f environment.yml
-     conda activate bc_variant_predictor
-     ```
+   - you can also use Conda if preffered
 
 3. **Prepare your dataset**:
-Place your `dataset.csv` file inside `data/raw/`.
+Place your `dataset.csv` file inside `data/raw/` (Dataset-1 sample is provided as a template for the data structure and to test the workflow).
 
 4. **Run the pipeline**:
 ```bash
-python src/main.py
+python main.py
 ```
 
 ---
@@ -104,10 +95,25 @@ Please cite the following if you use this repository:
 
 > Ahmad, R.M., Mohamad, M.S., Ali, B.R.  
 > "Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction" (2025).  
-> [GitHub Repository / Preprint Link Placeholder]
+> [GitHub Repository / Preprint Link Placeholder] (will be updated once published)
 
 ---
 
 ## 🔐 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 👩‍💻 Author
+
+**Rahaf M. Ahmad**  
+Ph.D. Candidate | Genetics & Machine Learning  
+United Arab Emirates University  
+ORCID: [0000-0002-7531-5264](https://orcid.org/0000-0002-7531-5264)
+
+---
+
+## 🤝 Acknowledgements
+
+- Inspired by the need for robust and interpretable predictions in precision oncology.
