@@ -40,7 +40,8 @@ def load_and_preprocess_data(file_path):
 
     if 'CLIN_SIG' in data.columns:
         le = LabelEncoder()
-        data['clinical-significance'] = le.fit_transform(data['clinical-significance'])
+        data['CLIN_SIG'] = le.fit_transform(data['CLIN_SIG'])
+
 
     # Drop columns that should not be used for training
     columns_to_drop = [not needed features]
@@ -457,7 +458,7 @@ def main():
         y_prob = clf.predict_proba(X_test)[:, 1]  
         predictions[clf_name] = y_prob  # Store each model's predictions as a key-value pair
 
-    save_results_to_excel(results, results.xlsx',1)
+    save_results_to_excel(results, 'results.xlsx',1)
 
 
 
