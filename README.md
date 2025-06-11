@@ -1,10 +1,11 @@
 # 🧬 Precision in Prediction: Tailoring Machine Learning for Breast Cancer Missense Variants
 
-This repository implements a complete machine learning pipeline for predicting the pathogenicity of **missense variants** in **breast cancer genes**, using disease-specific datasets. The framework includes data preprocessing, feature selection, classifier benchmarking, model evaluation, interpretability (LIME, permutation importance), calibration analysis, and statistical testing.
+This repository implements a complete machine learning pipeline for predicting the pathogenicity of **missense variants** in **breast cancer genes**, using disease-specific datasets. The framework includes preprocessing, feature selection, classifier benchmarking, multi-seed model evaluation, interpretability (LIME, permutation importance), calibration analysis, and statistical testing.
 
 📝 **Associated Manuscript**:  
-*“Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variants Pathogenicity Prediction”*  
-📎 [Preprint or GitHub DOI Placeholder] (will be updated once published)
+*“Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variant Pathogenicity Prediction”*  
+📄 Manuscript Submitted  
+📎 [GitHub Repository](https://github.com/rahafahmad89/Precision-for-prediction)
 
 ---
 
@@ -12,62 +13,75 @@ This repository implements a complete machine learning pipeline for predicting t
 
 ```
 .
-├── data/              
-├── outputs/            # Model results, figures, metrics
-│   ├── models/
-│   └── figures/
-├── main.py
-├── requirements.txt    # Pip dependencies
-├── LICENSE             # License (MIT)
-└── README.md           # Project documentation
+├── data/                          # Input datasets and feature descriptions
+├── scripts/                       # Phase 1, Phase 2, interpretability, plotting
+│   ├── phase1_seed_evaluation.py
+│   ├── phase2_best_seed_selection.py
+│   ├── interpretability_lime.py
+│   └── permutation_importance.py
+├── results/                       # Metrics, plots, and visualizations
+│   ├── combined_ROC_CI.png
+│   ├── metrics_with_CI.xlsx
+│   ├── best_seed_per_model.csv
+│   ├── LIME_TP_TN_FP_FN.png
+│   └── Permutation_Importance_ET.png
+├── main.py                        # Unified pipeline execution
+├── requirements.txt
+├── LICENSE
+└── README.md
 ```
+
+---
+
+## 📌 Highlights
+
+- Disease-specific modeling for breast cancer variant pathogenicity
+- Two-phase ML pipeline with best seed evaluation
+- Interpretability with LIME on TP, TN, FP, FN samples
+- Feature ranking via Permutation Importance
+- Bootstrapped confidence intervals and statistical model validation
+- Clinically oriented performance metric prioritization
 
 ---
 
 ## 🚀 How to Run
 
-1. **Clone the repository**:
+### 1. Clone the repository
 ```bash
 git clone https://github.com/rahafahmad89/Precision-for-prediction.git
 cd Precision-for-prediction
-
 ```
 
-2. **Install dependencies**:
-   - Using pip:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   - you can also use Conda if preffered
+### 2. Install dependencies
+Using pip:
+```bash
+pip install -r requirements.txt
+```
 
-3. **Prepare your dataset**:
-Place your `dataset.csv` file inside `data/raw/` (Dataset-1 sample is provided as a template for the data structure and to test the workflow).
+### 3. Prepare the dataset
+Place your input CSV file in `data/raw/`. A sample `Dataset-1.csv` is provided for structure reference.
 
-4. **Run the pipeline**:
+### 4. Run the pipeline
 ```bash
 python main.py
 ```
 
 ---
 
-## 🔍 Pipeline Workflow
+## 🔁 Two-Phase Evaluation Strategy
 
-- Data cleaning, label encoding
-- Pearson correlation filter (threshold = 0.9)
-- Feature selection using RFE
-- Classifier training and evaluation
-- Performance metrics: AUC, precision, recall, F1-score, MCC, Cohen's kappa
-- ROC and PR curve generation
-- LIME interpretability per model
-- Permutation Feature Importance
-- Statistical tests: z-test, ANOVA, Shapiro-Wilk, Levene
-- Output saving as .xlsx and .png files
+The workflow is structured in two phases for reproducibility and robustness:
+
+- **Phase 1**: Initial training with a fixed seed (42) for baseline comparisons and interpretability setup.
+- **Phase 2**: Evaluation across multiple seeds (42, 101, 202, 303, 404) to select the best-performing seed per classifier.
+
+Interpretability (LIME and PMI), ROC with confidence intervals, and metric tables are generated using the best seed identified in Phase 2 for the best-performing model (Extra Trees).
 
 ---
 
 ## 🤖 Machine Learning Models Evaluated
 
-- Extra Trees Classifier
+- Extra Trees Classifier *(Best Performing)*
 - Random Forest Classifier
 - XGBoost Classifier
 - Logistic Regression
@@ -81,25 +95,27 @@ python main.py
 
 ## 📊 Output Artifacts
 
-- `results1.xlsx`, `results2.xlsx` – Metric scores
-- `statistical.xlsx` – p-values and test statistics
-- `roc_curve.png`, `precision_recall_curve.png`, `calibration_curve.png`
-- `correlation_heatmap.png`
-- LIME and permutation feature plots
+- `combined_ROC_CI.png` – ROC curves with 95% CI
+- `metrics_with_CI.xlsx` – AUC, precision, recall, F1-score with 95% CI
+- `best_seed_per_model.csv` – Best-performing random seed per classifier
+- `LIME_TP_TN_FP_FN.png` – Local interpretability of TP, TN, FP, FN
+- `Permutation_Importance_ET.png` – PMI for Extra Trees using optimal seed
+- `statistical.xlsx` – z-tests, Shapiro-Wilk, Levene’s test, ANOVA results
+- Calibration, PR, and feature heatmap plots
 
 ---
 
 ## 📚 Citation
 
-If you use this repository, please cite as (will be updated once published):
+If you use this repository, please cite:
 
 ```bibtex
-
-  authors = {Rahaf M. Ahmad, Mohd Saberi Mohamad, Bassam R. Ali*},
-  title = {Precision in Prediction: Tailoring Machine Learning for Breast Cancer Missense Variants },
+@article{ahmad2025precision,
+  author = {Rahaf M. Ahmad, Noura Al Dhaheri, Mohd Saberi Mohamad, Bassam R. Ali},
+  title = {Precision in Prediction: Tailoring Machine Learning Models for Breast Cancer Missense Variant Pathogenicity Prediction},
   year = {2025},
-  Link to GiHub repository annd publication doi = {\\url{https://github.com/rahafahmad89/Precision-for-prediction}},
-  note = {MIT License}
+  journal = {To be updated upon acceptance},
+  url = {https://github.com/rahafahmad89/Precision-for-prediction}
 }
 ```
 
@@ -107,14 +123,14 @@ If you use this repository, please cite as (will be updated once published):
 
 ## 🔐 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
 ## 👩‍💻 Author
 
 **Rahaf M. Ahmad**  
-Ph.D. Candidate | Genetics & Machine Learning  
+Ph.D. Candidate – Genetics & Machine Learning  
 United Arab Emirates University  
 ORCID: [0000-0002-7531-5264](https://orcid.org/0000-0002-7531-5264)
 
@@ -122,4 +138,4 @@ ORCID: [0000-0002-7531-5264](https://orcid.org/0000-0002-7531-5264)
 
 ## 🤝 Acknowledgements
 
-- Inspired by the need for robust and interpretable predictions in precision oncology.
+- This work is part of an ongoing effort to integrate interpretable AI into genomic variant classification for precision oncology.
