@@ -1,10 +1,13 @@
 pandas
 numpy
-scikit-learn
 matplotlib
 seaborn
+scikit-learn
 xgboost
 shap
 lime
-statsmodels
+scikeras
+tensorflow
+keras
 openpyxl
+statsmodels
