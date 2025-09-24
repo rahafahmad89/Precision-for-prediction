@@ -1,0 +1,38 @@
+{
+  "Random Forest": {
+    "youdenJ": 0.27,
+    "f1_opt": 0.26
+  },
+  "XGBoost": {
+    "youdenJ": 0.28185856342315674,
+    "f1_opt": 0.2291712909936905
+  },
+  "Logistic Regression": {
+    "youdenJ": 0.5668999035065652,
+    "f1_opt": 0.49676407226173075
+  },
+  "SVM": {
+    "youdenJ": 0.6411609653498421,
+    "f1_opt": 0.2762287258812829
+  },
+  "KNN": {
+    "youdenJ": 0.6,
+    "f1_opt": 0.2
+  },
+  "Naive Bayes": {
+    "youdenJ": 0.7059644740099121,
+    "f1_opt": 0.49567030941940016
+  },
+  "Decision Tree": {
+    "youdenJ": 1.0,
+    "f1_opt": 0.0
+  },
+  "AdaBoost": {
+    "youdenJ": 0.5362608883356061,
+    "f1_opt": 0.46877508994251005
+  },
+  "Extra Trees": {
+    "youdenJ": 0.26,
+    "f1_opt": 0.2
+  }
+}

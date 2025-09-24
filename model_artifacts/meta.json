@@ -1,0 +1,28 @@
+{
+  "best_classifier": "Extra Trees",
+  "seed": 101,
+  "n_features_total": 149,
+  "selected_features": [
+    "PolyPhen",
+    "MPC",
+    "pHaplo",
+    "pTriplo",
+    "BLOSUM62",
+    "ALFA_Total_AN",
+    "BayesDel_addAF_rankscore",
+    "DANN_rankscore",
+    "HUVEC_fitCons_rankscore",
+    "phastCons17way_primate_rankscore",
+    "phyloP17way_primate_rankscore",
+    "SpliceAI_pred_DP_AL",
+    "EXON",
+    "Amino_acids",
+    "Codons"
+  ],
+  "threshold": {
+    "youdenJ_mean": 0.540238310513898,
+    "p95_pathogenic": 0.028800000000001092,
+    "p95_benign": 0.51
+  },
+  "train_metrics_weighted_score": 0.9848582942790596
+}
