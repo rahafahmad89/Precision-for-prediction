@@ -15,7 +15,7 @@ The pipeline accompanies the manuscript:
 .
 ├── Test.csv                          # Provided standardized test set
 ├── model_artifacts/                  # Pre-trained model and supporting files
-│   ├── best_model.joblib             # Best-performing trained model
+│   ├── Extra_Trees_model.joblib             # Best-performing trained model
 │   ├── preprocessor.joblib           # Preprocessing pipeline
 │   ├── meta.json                     # Model metadata
 │   └── thresholds.json               # Thresholds for classification
